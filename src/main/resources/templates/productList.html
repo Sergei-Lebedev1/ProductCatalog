@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogue</title>
+</head>
+<body>
+
+<table border="1" style="width:300px">
+    <tr>
+        <th>Артикул</th>
+        <th>Название товара</th>
+        <th>Цена товара</th>
+        <th>Описание</th>
+
+    </tr>
+    <tr th:each="line : ${tab_lines}">
+        <td><span th:text="${line.id}"/></td>
+        <td><span th:text="${line.description}"/></td>
+        <td><span th:text="${line.price}"/></td>
+        <td><span th:text="${line.name}"/></td>
+
+    </tr>
+
+</table>
+</body>
+</html>
